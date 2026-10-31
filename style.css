@@ -1,0 +1,39 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #eef1f7; color: #333; }
+
+/* Sidebar on the left, main content on the right (Flexbox) */
+.layout { display: flex; min-height: 100vh; }
+
+.sidebar { width: 230px; background: #17233f; color: white; padding: 25px 20px; }
+.sidebar h2 { margin-bottom: 25px; font-size: 20px; }
+.sidebar ul { list-style: none; }
+.sidebar a { display: block; color: #cfd8f0; text-decoration: none;
+             padding: 10px; border-radius: 6px; margin-bottom: 5px; }
+.sidebar a:hover { background: #2f4278; color: white; }
+
+main { flex: 1; padding: 25px; }
+main h1 { margin-bottom: 20px; color: #17233f; }
+
+/* Cards */
+.card { background: white; padding: 20px; border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.card h2 { color: #2f4278; margin-bottom: 12px; font-size: 20px; }
+.card p { margin-bottom: 6px; }
+.card ul { padding-left: 20px; line-height: 1.8; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background: #2f4278; color: white; }
+tr:nth-child(even) { background: #f5f7fc; }     /* striped rows */
+
+/* Progress bars: outer grey bar + inner coloured bar whose width = percentage */
+.bar { background: #ddd; border-radius: 10px; height: 16px; margin-bottom: 14px; overflow: hidden; }
+.fill { background: #2e9e5b; height: 100%; }
+.fill.low { background: #e53935; }               /* red if attendance is low */
+
+/* Phones: sidebar goes on top */
+@media (max-width: 700px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; }
+}
