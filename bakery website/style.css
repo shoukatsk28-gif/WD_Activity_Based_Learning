@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Georgia, serif; background: #fff8f0; color: #4a2c2a; line-height: 1.6; }
+
+/* Colour scheme: pink + chocolate brown */
+header { background: #4a2c2a; color: #ffd6e0; text-align: center; padding: 20px; }
+nav { margin-top: 10px; }
+nav a { color: white; text-decoration: none; margin: 0 12px; }
+nav a:hover { color: #ff8fab; }
+
+.banner { background: #ffb3c6; text-align: center; padding: 60px 20px; }
+.banner h2 { font-size: 36px; }
+.banner p { background: white; display: inline-block; margin-top: 15px;
+            padding: 8px 20px; border-radius: 20px; }
+
+section { max-width: 950px; margin: 35px auto; padding: 0 20px; }
+section h2 { text-align: center; margin-bottom: 20px; color: #c9184a; }
+
+/* Product grid: columns adjust to the screen size automatically */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.item { background: white; text-align: center; padding: 20px; border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.item:hover { transform: scale(1.05); }
+.emoji { font-size: 60px; }
+.price { color: #c9184a; font-weight: bold; font-size: 20px; }
+
+/* Image gallery (coloured boxes with emojis, replace with <img> later) */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.gallery div { background: #ffe5ec; font-size: 50px; text-align: center; padding: 30px; border-radius: 10px; }
+
+footer { background: #4a2c2a; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  nav a { display: inline-block; margin: 4px 8px; }
+}
