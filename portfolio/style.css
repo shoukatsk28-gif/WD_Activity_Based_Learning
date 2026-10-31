@@ -1,0 +1,58 @@
+/* ---------- Basic reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }           /* smooth scrolling on nav click */
+body { font-family: Arial, sans-serif; background: #f4f6fb; color: #333; line-height: 1.6; }
+
+/* ---------- Navigation ---------- */
+nav {
+  position: sticky; top: 0;                 /* stays at top while scrolling */
+  background: #1e2a4a; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 30px;
+}
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom-color: #ffc857; color: #ffc857; }   /* interactive effect */
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center; color: white; padding: 70px 20px;
+  background: linear-gradient(135deg, #3a5bd9, #7b4fd6);
+  animation: fadeIn 1.5s ease;              /* CSS animation */
+}
+.avatar { font-size: 70px; background: white; width: 110px; height: 110px;
+          border-radius: 50%; margin: 0 auto 15px; line-height: 110px; }
+.btn { display: inline-block; margin-top: 20px; padding: 12px 25px;
+       background: #ffc857; color: #222; text-decoration: none;
+       border-radius: 25px; font-weight: bold; transition: transform 0.3s; }
+.btn:hover { transform: scale(1.1); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Sections ---------- */
+section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+section h2 { color: #1e2a4a; border-left: 5px solid #3a5bd9; padding-left: 10px; margin-bottom: 15px; }
+
+/* ---------- Cards ---------- */
+.card-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.card { flex: 1; min-width: 220px; background: white; padding: 20px;
+        border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s; }
+.card:hover { transform: translateY(-8px); }
+
+/* ---------- Skills ---------- */
+.skills span { display: inline-block; background: #3a5bd9; color: white;
+               padding: 8px 18px; margin: 5px; border-radius: 20px; }
+.list { list-style: none; }
+.list li { background: white; padding: 10px; margin-bottom: 8px; border-radius: 6px; }
+
+footer { background: #1e2a4a; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+/* ---------- Responsive layout (phones) ---------- */
+@media (max-width: 600px) {
+  nav { flex-direction: column; gap: 10px; }
+  nav ul { gap: 12px; flex-wrap: wrap; justify-content: center; }
+}
